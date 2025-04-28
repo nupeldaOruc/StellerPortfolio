@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="StellerAcunMedyaDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="acun medya">
+    <Key>
+      <PropertyRef Name="TestimonialID" />
+    </Key>
+    <Property Name="TestimonialID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="description" Type="nvarchar" MaxLength="250" />
+    <Property Name="Namesurname" Type="varchar" MaxLength="30" />
+    <Property Name="İmage" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="TblContat">
+    <Key>
+      <PropertyRef Name="ContacId" />
+    </Key>
+    <Property Name="ContacId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Adress" Type="varchar" MaxLength="150" />
+    <Property Name="Phone" Type="varchar" MaxLength="11" />
+    <Property Name="Email" Type="varchar(max)" />
+    <Property Name="MapUrl" Type="varchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'StellerAcunMedyaDb.dbo.tblFEature' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="tblFEature">
+          <Property Name="featuredID" Type="int" />
+          <Property Name="NameSurname" Type="nchar" MaxLength="50" />
+          <Property Name="job" Type="nchar" MaxLength="50" />
+          <Property Name="Title" Type="nchar" MaxLength="500" />
+          <Property Name="image" Type="nvarchar(max)" />
+          <Property Name="CVdowlondurl" Type="nchar" MaxLength="500" />
+        </EntityType>-->
+  <EntityType Name="TblMsj">
+    <Key>
+      <PropertyRef Name="MessgeId" />
+    </Key>
+    <Property Name="MessgeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Email" Type="nchar" MaxLength="50" />
+    <Property Name="NameSurname" Type="nchar" MaxLength="50" />
+    <Property Name="Contet" Type="nchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="TblProject">
+    <Key>
+      <PropertyRef Name="ProjeId" />
+    </Key>
+    <Property Name="ProjeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="nchar" MaxLength="200" />
+    <Property Name="ImageUrl" Type="nvarchar(max)" />
+    <Property Name="GitHupUrl" Type="nvarchar(max)" />
+    <Property Name="Title" Type="nchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="TblService">
+    <Key>
+      <PropertyRef Name="servicID" />
+    </Key>
+    <Property Name="servicID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="servicedName" Type="nchar" MaxLength="50" />
+    <Property Name="serviceliconUrl" Type="nvarchar(max)" />
+    <Property Name="ServicesStatus" Type="bit" />
+  </EntityType>
+  <EntityType Name="TblSkiil">
+    <Key>
+      <PropertyRef Name="SKILLID" />
+    </Key>
+    <Property Name="SKILLID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nchar" MaxLength="50" />
+    <Property Name="Description" Type="nchar" MaxLength="200" />
+    <Property Name="SkillName" Type="nchar" MaxLength="50" />
+    <Property Name="Value" Type="int" />
+  </EntityType>
+  <EntityType Name="TblSocial">
+    <Key>
+      <PropertyRef Name="SocialMedyaID" />
+    </Key>
+    <Property Name="SocialMedyaID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Icon" Type="varchar" MaxLength="30" />
+    <Property Name="SocialMedyaAD" Type="varchar" MaxLength="20" />
+    <Property Name="Url" Type="varchar(max)" />
+  </EntityType>
+  <EntityContainer Name="StellerAcunMedyaDbModelStoreContainer">
+    <EntitySet Name="acun medya" EntityType="Self.acun medya" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblContat" EntityType="Self.TblContat" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblMsj" EntityType="Self.TblMsj" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblProject" EntityType="Self.TblProject" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblService" EntityType="Self.TblService" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblSkiil" EntityType="Self.TblSkiil" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblSocial" EntityType="Self.TblSocial" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

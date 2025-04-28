@@ -1,0 +1,28 @@
+﻿@model Steller.Models.TblAbout
+@{
+    ViewBag.Title = "AddAbout";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h3>Yeni Hakkımıda Ekleme Sayfası </h3>
+<br/>
+
+<form method="post">
+    <label>Resim Url</label>
+    input type ="txt" name ="ImageUrl" class="from-control"/>
+    <br />
+    <label> Ad Soyad</label>
+    input type ="txt" name ="NameSurname class ="from-control"   />
+    <br />
+    <label> Unvan</label>
+    input type ="txt" name ="Title" class= "from-control"   />
+    <br />
+    <label> Başlık</label>
+    input type ="txt" name ="Decription" class= "from-control"   />
+
+    <br />
+    <button class="btn btn-outline-primary">Kaydet</button>
+
+
+
+</form>

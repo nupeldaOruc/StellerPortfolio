@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="StellerAcunMedyaDbModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Talha">
+          <Key>
+            <PropertyRef Name="AboutId" />
+          </Key>
+          <Property Name="AboutId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Description" Type="varchar(max)" />
+          <Property Name="Name Surname" Type="varchar" MaxLength="50" />
+          <Property Name="ImageUrl" Type="varchar" MaxLength="50" />
+          <Property Name="Title" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="TblAbout">
+          <Key>
+            <PropertyRef Name="AboutId" />
+          </Key>
+          <Property Name="AboutId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Description" Type="varchar(max)" />
+          <Property Name="NameSurname" Type="varchar" MaxLength="50" />
+          <Property Name="Title" Type="varchar" MaxLength="50" />
+          <Property Name="ImageUrl" Type="image" />
+        </EntityType>
+        <EntityType Name="TblAdmin">
+          <Key>
+            <PropertyRef Name="AdminId" />
+          </Key>
+          <Property Name="AdminId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Passaword" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TblContat">
+          <Key>
+            <PropertyRef Name="ContacId" />
+          </Key>
+          <Property Name="ContacId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Adress" Type="varchar" MaxLength="150" />
+          <Property Name="Phone" Type="varchar" MaxLength="11" />
+          <Property Name="Email" Type="varchar(max)" />
+          <Property Name="MapUrl" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="tblFeature">
+          <Key>
+            <PropertyRef Name="featuredID" />
+          </Key>
+          <Property Name="featuredID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NameSurname" Type="nchar" MaxLength="50" />
+          <Property Name="job" Type="nchar" MaxLength="50" />
+          <Property Name="Title" Type="nchar" MaxLength="500" />
+          <Property Name="image" Type="nvarchar(max)" />
+          <Property Name="CVdowlondurl" Type="nchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="TblMsj">
+          <Key>
+            <PropertyRef Name="MessgeId" />
+          </Key>
+          <Property Name="MessgeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Email" Type="nchar" MaxLength="50" />
+          <Property Name="NameSurname" Type="nchar" MaxLength="50" />
+          <Property Name="Contet" Type="nchar" MaxLength="300" />
+          <Property Name="IsRead" Type="bit" />
+        </EntityType>
+        <EntityType Name="TblProject">
+          <Key>
+            <PropertyRef Name="ProjeId" />
+          </Key>
+          <Property Name="ProjeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Description" Type="nchar" MaxLength="200" />
+          <Property Name="ImageUrl" Type="nvarchar(max)" />
+          <Property Name="GitHupUrl" Type="nvarchar(max)" />
+          <Property Name="Title" Type="nchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="TblService">
+          <Key>
+            <PropertyRef Name="servicID" />
+          </Key>
+          <Property Name="servicID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="servicedName" Type="nchar" MaxLength="50" />
+          <Property Name="serviceliconUrl" Type="nvarchar(max)" />
+          <Property Name="ServicesStatus" Type="bit" />
+        </EntityType>
+        <EntityType Name="TblSkiil">
+          <Key>
+            <PropertyRef Name="SKILLID" />
+          </Key>
+          <Property Name="SKILLID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nchar" MaxLength="50" />
+          <Property Name="Description" Type="nchar" MaxLength="200" />
+          <Property Name="SkillName" Type="nchar" MaxLength="50" />
+          <Property Name="Value" Type="int" />
+        </EntityType>
+        <EntityType Name="TblSocial">
+          <Key>
+            <PropertyRef Name="SocialMedyaID" />
+          </Key>
+          <Property Name="SocialMedyaID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Icon" Type="varchar" MaxLength="30" />
+          <Property Name="SocialMedyaAD" Type="varchar" MaxLength="20" />
+          <Property Name="Url" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="Testimonial">
+          <Key>
+            <PropertyRef Name="TestimonialID" />
+          </Key>
+          <Property Name="TestimonialID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="50" />
+          <Property Name="description" Type="nvarchar" MaxLength="250" />
+          <Property Name="Namesurname" Type="varchar" MaxLength="30" />
+          <Property Name="İmage" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityContainer Name="StellerAcunMedyaDbModel1StoreContainer">
+          <EntitySet Name="Talha" EntityType="Self.Talha" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblAbout" EntityType="Self.TblAbout" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblAdmin" EntityType="Self.TblAdmin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblContat" EntityType="Self.TblContat" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblFeature" EntityType="Self.tblFeature" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblMsj" EntityType="Self.TblMsj" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblProject" EntityType="Self.TblProject" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblService" EntityType="Self.TblService" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblSkiil" EntityType="Self.TblSkiil" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblSocial" EntityType="Self.TblSocial" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Testimonial" EntityType="Self.Testimonial" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="StellerAcunMedyaDbModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="TblAbout">
+          <Key>
+            <PropertyRef Name="AboutId" />
+          </Key>
+          <Property Name="AboutId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="NameSurname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ImageUrl" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="TblContat">
+          <Key>
+            <PropertyRef Name="ContacId" />
+          </Key>
+          <Property Name="ContacId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Adress" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Phone" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="MapUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TblMsj">
+          <Key>
+            <PropertyRef Name="MessgeId" />
+          </Key>
+          <Property Name="MessgeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="NameSurname" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="Contet" Type="String" MaxLength="300" FixedLength="true" Unicode="true" />
+          <Property Name="IsRead" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="TblProject">
+          <Key>
+            <PropertyRef Name="ProjeId" />
+          </Key>
+          <Property Name="ProjeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+          <Property Name="ImageUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="GitHupUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Title" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TblService">
+          <Key>
+            <PropertyRef Name="servicID" />
+          </Key>
+          <Property Name="servicID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="servicedName" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="serviceliconUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ServicesStatus" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="TblSkiil">
+          <Key>
+            <PropertyRef Name="SKILLID" />
+          </Key>
+          <Property Name="SKILLID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+          <Property Name="SkillName" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="Value" Type="Int32" />
+        </EntityType>
+        <EntityType Name="TblSocial">
+          <Key>
+            <PropertyRef Name="SocialMedyaID" />
+          </Key>
+          <Property Name="SocialMedyaID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Icon" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="SocialMedyaAD" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Url" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Testimonial">
+          <Key>
+            <PropertyRef Name="TestimonialID" />
+          </Key>
+          <Property Name="TestimonialID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Namesurname" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="İmage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="StellerAcunMedyaDbEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TblAbout" EntityType="Self.TblAbout" />
+          <EntitySet Name="TblContat" EntityType="Self.TblContat" />
+          <EntitySet Name="TblMsj" EntityType="Self.TblMsj" />
+          <EntitySet Name="TblProject" EntityType="Self.TblProject" />
+          <EntitySet Name="TblService" EntityType="Self.TblService" />
+          <EntitySet Name="TblSkiil" EntityType="Self.TblSkiil" />
+          <EntitySet Name="TblSocial" EntityType="Self.TblSocial" />
+          <EntitySet Name="Testimonial" EntityType="Self.Testimonial" />
+          <EntitySet Name="tblFeature" EntityType="StellerAcunMedyaDbModel1.tblFeature" />
+          <EntitySet Name="Talha" EntityType="StellerAcunMedyaDbModel1.Talha" />
+          <EntitySet Name="TblAdmin" EntityType="StellerAcunMedyaDbModel1.TblAdmin" />
+        </EntityContainer>
+        <EntityType Name="tblFeature">
+          <Key>
+            <PropertyRef Name="featuredID" />
+          </Key>
+          <Property Name="featuredID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NameSurname" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="job" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="Title" Type="String" MaxLength="500" FixedLength="true" Unicode="true" />
+          <Property Name="image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CVdowlondurl" Type="String" MaxLength="500" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Talha">
+          <Key>
+            <PropertyRef Name="AboutId" />
+          </Key>
+          <Property Name="AboutId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Name_Surname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ImageUrl" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TblAdmin">
+          <Key>
+            <PropertyRef Name="AdminId" />
+          </Key>
+          <Property Name="AdminId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Passaword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="StellerAcunMedyaDbModel1StoreContainer" CdmEntityContainer="StellerAcunMedyaDbEntities1">
+          <EntitySetMapping Name="TblAbout">
+            <EntityTypeMapping TypeName="StellerAcunMedyaDbModel1.TblAbout">
+              <MappingFragment StoreEntitySet="TblAbout">
+                <ScalarProperty Name="AboutId" ColumnName="AboutId" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="NameSurname" ColumnName="NameSurname" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblContat">
+            <EntityTypeMapping TypeName="StellerAcunMedyaDbModel1.TblContat">
+              <MappingFragment StoreEntitySet="TblContat">
+                <ScalarProperty Name="ContacId" ColumnName="ContacId" />
+                <ScalarProperty Name="Adress" ColumnName="Adress" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="MapUrl" ColumnName="MapUrl" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblMsj">
+            <EntityTypeMapping TypeName="StellerAcunMedyaDbModel1.TblMsj">
+              <MappingFragment StoreEntitySet="TblMsj">
+                <ScalarProperty Name="IsRead" ColumnName="IsRead" />
+                <ScalarProperty Name="MessgeId" ColumnName="MessgeId" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="NameSurname" ColumnName="NameSurname" />
+                <ScalarProperty Name="Contet" ColumnName="Contet" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblProject">
+            <EntityTypeMapping TypeName="StellerAcunMedyaDbModel1.TblProject">
+              <MappingFragment StoreEntitySet="TblProject">
+                <ScalarProperty Name="ProjeId" ColumnName="ProjeId" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+                <ScalarProperty Name="GitHupUrl" ColumnName="GitHupUrl" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblService">
+            <EntityTypeMapping TypeName="StellerAcunMedyaDbModel1.TblService">
+              <MappingFragment StoreEntitySet="TblService">
+                <ScalarProperty Name="servicID" ColumnName="servicID" />
+                <ScalarProperty Name="servicedName" ColumnName="servicedName" />
+                <ScalarProperty Name="serviceliconUrl" ColumnName="serviceliconUrl" />
+                <ScalarProperty Name="ServicesStatus" ColumnName="ServicesStatus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblSkiil">
+            <EntityTypeMapping TypeName="StellerAcunMedyaDbModel1.TblSkiil">
+              <MappingFragment StoreEntitySet="TblSkiil">
+                <ScalarProperty Name="SKILLID" ColumnName="SKILLID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="SkillName" ColumnName="SkillName" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblSocial">
+            <EntityTypeMapping TypeName="StellerAcunMedyaDbModel1.TblSocial">
+              <MappingFragment StoreEntitySet="TblSocial">
+                <ScalarProperty Name="SocialMedyaID" ColumnName="SocialMedyaID" />
+                <ScalarProperty Name="Icon" ColumnName="Icon" />
+                <ScalarProperty Name="SocialMedyaAD" ColumnName="SocialMedyaAD" />
+                <ScalarProperty Name="Url" ColumnName="Url" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Testimonial">
+            <EntityTypeMapping TypeName="StellerAcunMedyaDbModel1.Testimonial">
+              <MappingFragment StoreEntitySet="Testimonial">
+                <ScalarProperty Name="TestimonialID" ColumnName="TestimonialID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="Namesurname" ColumnName="Namesurname" />
+                <ScalarProperty Name="İmage" ColumnName="İmage" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblFeature">
+            <EntityTypeMapping TypeName="StellerAcunMedyaDbModel1.tblFeature">
+              <MappingFragment StoreEntitySet="tblFeature">
+                <ScalarProperty Name="CVdowlondurl" ColumnName="CVdowlondurl" />
+                <ScalarProperty Name="image" ColumnName="image" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="job" ColumnName="job" />
+                <ScalarProperty Name="NameSurname" ColumnName="NameSurname" />
+                <ScalarProperty Name="featuredID" ColumnName="featuredID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Talha">
+            <EntityTypeMapping TypeName="StellerAcunMedyaDbModel1.Talha">
+              <MappingFragment StoreEntitySet="Talha">
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+                <ScalarProperty Name="Name_Surname" ColumnName="Name Surname" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="AboutId" ColumnName="AboutId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblAdmin">
+            <EntityTypeMapping TypeName="StellerAcunMedyaDbModel1.TblAdmin">
+              <MappingFragment StoreEntitySet="TblAdmin">
+                <ScalarProperty Name="Passaword" ColumnName="Passaword" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="AdminId" ColumnName="AdminId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

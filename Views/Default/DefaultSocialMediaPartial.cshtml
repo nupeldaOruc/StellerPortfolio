@@ -1,0 +1,12 @@
+﻿@model List<Steller.Models.TblSocial>
+
+
+
+<div class="socials  mt-4">
+@foreach(var item in Model)
+            {
+    <a class="social-item" href="@item.Url"  target="_blank" ><i class="@item.Icon"></i></a>
+            }
+ 
+    
+</div>

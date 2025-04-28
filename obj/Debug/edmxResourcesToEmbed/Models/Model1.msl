@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="StellerAcunMedyaDbModelStoreContainer" CdmEntityContainer="StellerAcunMedyaDbEntities">
+    <EntitySetMapping Name="acun_medya">
+      <EntityTypeMapping TypeName="StellerAcunMedyaDbModel.acun_medya">
+        <MappingFragment StoreEntitySet="acun medya">
+          <ScalarProperty Name="TestimonialID" ColumnName="TestimonialID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="Namesurname" ColumnName="Namesurname" />
+          <ScalarProperty Name="İmage" ColumnName="İmage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblMsj">
+      <EntityTypeMapping TypeName="StellerAcunMedyaDbModel.TblMsj">
+        <MappingFragment StoreEntitySet="TblMsj">
+          <ScalarProperty Name="Contet" ColumnName="Contet" />
+          <ScalarProperty Name="NameSurname" ColumnName="NameSurname" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="MessgeId" ColumnName="MessgeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblProject">
+      <EntityTypeMapping TypeName="StellerAcunMedyaDbModel.TblProject">
+        <MappingFragment StoreEntitySet="TblProject">
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="GitHupUrl" ColumnName="GitHupUrl" />
+          <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ProjeId" ColumnName="ProjeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblService">
+      <EntityTypeMapping TypeName="StellerAcunMedyaDbModel.TblService">
+        <MappingFragment StoreEntitySet="TblService">
+          <ScalarProperty Name="ServicesStatus" ColumnName="ServicesStatus" />
+          <ScalarProperty Name="serviceliconUrl" ColumnName="serviceliconUrl" />
+          <ScalarProperty Name="servicedName" ColumnName="servicedName" />
+          <ScalarProperty Name="servicID" ColumnName="servicID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblSkiil">
+      <EntityTypeMapping TypeName="StellerAcunMedyaDbModel.TblSkiil">
+        <MappingFragment StoreEntitySet="TblSkiil">
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="SkillName" ColumnName="SkillName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="SKILLID" ColumnName="SKILLID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblContat">
+      <EntityTypeMapping TypeName="StellerAcunMedyaDbModel.TblContat">
+        <MappingFragment StoreEntitySet="TblContat">
+          <ScalarProperty Name="MapUrl" ColumnName="MapUrl" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Adress" ColumnName="Adress" />
+          <ScalarProperty Name="ContacId" ColumnName="ContacId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblSocial">
+      <EntityTypeMapping TypeName="StellerAcunMedyaDbModel.TblSocial">
+        <MappingFragment StoreEntitySet="TblSocial">
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="SocialMedyaAD" ColumnName="SocialMedyaAD" />
+          <ScalarProperty Name="Icon" ColumnName="Icon" />
+          <ScalarProperty Name="SocialMedyaID" ColumnName="SocialMedyaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

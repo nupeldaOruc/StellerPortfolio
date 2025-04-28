@@ -1,0 +1,26 @@
+﻿@model Steller.Models.tblFeature
+@{
+    ViewBag.Title = "AddFeature";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Yeni Öne Çıkan Alanı Ekle</h2>
+<form method="post">
+    <label>Resim Url</label>
+    @Html.TextBoxFor(x => x.image, new { @class = "form-control" })
+    <br />
+    <label> Başlık</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    <label> Ad Soyad</label>
+    @Html.TextBoxFor(x => x.NameSurname, new { @class = "form-control" })
+    <br />
+    <label> Unvan</label>
+    @Html.TextBoxFor(x => x.job, new { @class = "form-control" })
+    <br />
+    <label>Cv Dowland Url </label>
+    @Html.TextBoxFor(x => x.CVdowlondurl, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-outline-primary">Kaydet</button>
+
+</form>

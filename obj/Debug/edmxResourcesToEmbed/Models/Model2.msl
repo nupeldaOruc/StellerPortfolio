@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="StellerAcunMedyaDbModel1StoreContainer" CdmEntityContainer="StellerAcunMedyaDbEntities1">
+    <EntitySetMapping Name="TblAbout">
+      <EntityTypeMapping TypeName="StellerAcunMedyaDbModel1.TblAbout">
+        <MappingFragment StoreEntitySet="TblAbout">
+          <ScalarProperty Name="AboutId" ColumnName="AboutId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="NameSurname" ColumnName="NameSurname" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblContat">
+      <EntityTypeMapping TypeName="StellerAcunMedyaDbModel1.TblContat">
+        <MappingFragment StoreEntitySet="TblContat">
+          <ScalarProperty Name="ContacId" ColumnName="ContacId" />
+          <ScalarProperty Name="Adress" ColumnName="Adress" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="MapUrl" ColumnName="MapUrl" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblMsj">
+      <EntityTypeMapping TypeName="StellerAcunMedyaDbModel1.TblMsj">
+        <MappingFragment StoreEntitySet="TblMsj">
+          <ScalarProperty Name="IsRead" ColumnName="IsRead" />
+          <ScalarProperty Name="MessgeId" ColumnName="MessgeId" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="NameSurname" ColumnName="NameSurname" />
+          <ScalarProperty Name="Contet" ColumnName="Contet" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblProject">
+      <EntityTypeMapping TypeName="StellerAcunMedyaDbModel1.TblProject">
+        <MappingFragment StoreEntitySet="TblProject">
+          <ScalarProperty Name="ProjeId" ColumnName="ProjeId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+          <ScalarProperty Name="GitHupUrl" ColumnName="GitHupUrl" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblService">
+      <EntityTypeMapping TypeName="StellerAcunMedyaDbModel1.TblService">
+        <MappingFragment StoreEntitySet="TblService">
+          <ScalarProperty Name="servicID" ColumnName="servicID" />
+          <ScalarProperty Name="servicedName" ColumnName="servicedName" />
+          <ScalarProperty Name="serviceliconUrl" ColumnName="serviceliconUrl" />
+          <ScalarProperty Name="ServicesStatus" ColumnName="ServicesStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblSkiil">
+      <EntityTypeMapping TypeName="StellerAcunMedyaDbModel1.TblSkiil">
+        <MappingFragment StoreEntitySet="TblSkiil">
+          <ScalarProperty Name="SKILLID" ColumnName="SKILLID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="SkillName" ColumnName="SkillName" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblSocial">
+      <EntityTypeMapping TypeName="StellerAcunMedyaDbModel1.TblSocial">
+        <MappingFragment StoreEntitySet="TblSocial">
+          <ScalarProperty Name="SocialMedyaID" ColumnName="SocialMedyaID" />
+          <ScalarProperty Name="Icon" ColumnName="Icon" />
+          <ScalarProperty Name="SocialMedyaAD" ColumnName="SocialMedyaAD" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Testimonial">
+      <EntityTypeMapping TypeName="StellerAcunMedyaDbModel1.Testimonial">
+        <MappingFragment StoreEntitySet="Testimonial">
+          <ScalarProperty Name="TestimonialID" ColumnName="TestimonialID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="Namesurname" ColumnName="Namesurname" />
+          <ScalarProperty Name="İmage" ColumnName="İmage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblFeature">
+      <EntityTypeMapping TypeName="StellerAcunMedyaDbModel1.tblFeature">
+        <MappingFragment StoreEntitySet="tblFeature">
+          <ScalarProperty Name="CVdowlondurl" ColumnName="CVdowlondurl" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="job" ColumnName="job" />
+          <ScalarProperty Name="NameSurname" ColumnName="NameSurname" />
+          <ScalarProperty Name="featuredID" ColumnName="featuredID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Talha">
+      <EntityTypeMapping TypeName="StellerAcunMedyaDbModel1.Talha">
+        <MappingFragment StoreEntitySet="Talha">
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+          <ScalarProperty Name="Name_Surname" ColumnName="Name Surname" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="AboutId" ColumnName="AboutId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblAdmin">
+      <EntityTypeMapping TypeName="StellerAcunMedyaDbModel1.TblAdmin">
+        <MappingFragment StoreEntitySet="TblAdmin">
+          <ScalarProperty Name="Passaword" ColumnName="Passaword" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="AdminId" ColumnName="AdminId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

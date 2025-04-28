@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="StellerAcunMedyaDbModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Talha">
+    <Key>
+      <PropertyRef Name="AboutId" />
+    </Key>
+    <Property Name="AboutId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="varchar(max)" />
+    <Property Name="Name Surname" Type="varchar" MaxLength="50" />
+    <Property Name="ImageUrl" Type="varchar" MaxLength="50" />
+    <Property Name="Title" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="TblAbout">
+    <Key>
+      <PropertyRef Name="AboutId" />
+    </Key>
+    <Property Name="AboutId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="varchar(max)" />
+    <Property Name="NameSurname" Type="varchar" MaxLength="50" />
+    <Property Name="Title" Type="varchar" MaxLength="50" />
+    <Property Name="ImageUrl" Type="image" />
+  </EntityType>
+  <EntityType Name="TblAdmin">
+    <Key>
+      <PropertyRef Name="AdminId" />
+    </Key>
+    <Property Name="AdminId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Passaword" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TblContat">
+    <Key>
+      <PropertyRef Name="ContacId" />
+    </Key>
+    <Property Name="ContacId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Adress" Type="varchar" MaxLength="150" />
+    <Property Name="Phone" Type="varchar" MaxLength="11" />
+    <Property Name="Email" Type="varchar(max)" />
+    <Property Name="MapUrl" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="tblFeature">
+    <Key>
+      <PropertyRef Name="featuredID" />
+    </Key>
+    <Property Name="featuredID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameSurname" Type="nchar" MaxLength="50" />
+    <Property Name="job" Type="nchar" MaxLength="50" />
+    <Property Name="Title" Type="nchar" MaxLength="500" />
+    <Property Name="image" Type="nvarchar(max)" />
+    <Property Name="CVdowlondurl" Type="nchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="TblMsj">
+    <Key>
+      <PropertyRef Name="MessgeId" />
+    </Key>
+    <Property Name="MessgeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Email" Type="nchar" MaxLength="50" />
+    <Property Name="NameSurname" Type="nchar" MaxLength="50" />
+    <Property Name="Contet" Type="nchar" MaxLength="300" />
+    <Property Name="IsRead" Type="bit" />
+  </EntityType>
+  <EntityType Name="TblProject">
+    <Key>
+      <PropertyRef Name="ProjeId" />
+    </Key>
+    <Property Name="ProjeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="nchar" MaxLength="200" />
+    <Property Name="ImageUrl" Type="nvarchar(max)" />
+    <Property Name="GitHupUrl" Type="nvarchar(max)" />
+    <Property Name="Title" Type="nchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="TblService">
+    <Key>
+      <PropertyRef Name="servicID" />
+    </Key>
+    <Property Name="servicID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="servicedName" Type="nchar" MaxLength="50" />
+    <Property Name="serviceliconUrl" Type="nvarchar(max)" />
+    <Property Name="ServicesStatus" Type="bit" />
+  </EntityType>
+  <EntityType Name="TblSkiil">
+    <Key>
+      <PropertyRef Name="SKILLID" />
+    </Key>
+    <Property Name="SKILLID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nchar" MaxLength="50" />
+    <Property Name="Description" Type="nchar" MaxLength="200" />
+    <Property Name="SkillName" Type="nchar" MaxLength="50" />
+    <Property Name="Value" Type="int" />
+  </EntityType>
+  <EntityType Name="TblSocial">
+    <Key>
+      <PropertyRef Name="SocialMedyaID" />
+    </Key>
+    <Property Name="SocialMedyaID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Icon" Type="varchar" MaxLength="30" />
+    <Property Name="SocialMedyaAD" Type="varchar" MaxLength="20" />
+    <Property Name="Url" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Testimonial">
+    <Key>
+      <PropertyRef Name="TestimonialID" />
+    </Key>
+    <Property Name="TestimonialID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="description" Type="nvarchar" MaxLength="250" />
+    <Property Name="Namesurname" Type="varchar" MaxLength="30" />
+    <Property Name="İmage" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityContainer Name="StellerAcunMedyaDbModel1StoreContainer">
+    <EntitySet Name="Talha" EntityType="Self.Talha" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblAbout" EntityType="Self.TblAbout" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblAdmin" EntityType="Self.TblAdmin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblContat" EntityType="Self.TblContat" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblFeature" EntityType="Self.tblFeature" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblMsj" EntityType="Self.TblMsj" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblProject" EntityType="Self.TblProject" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblService" EntityType="Self.TblService" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblSkiil" EntityType="Self.TblSkiil" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblSocial" EntityType="Self.TblSocial" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Testimonial" EntityType="Self.Testimonial" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

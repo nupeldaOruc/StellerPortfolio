@@ -1,0 +1,38 @@
+﻿@model List<Steller.Models.TblService>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
+}
+
+<h2>Hizmetlerim</h2>
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>#</th>
+        <th>Hizmet Adı</th>
+        <th>İkon</th>
+        <th>Durum</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+        <th>Aktif Yap</th>
+        <th>Pasif Yap</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        count++;
+<tr>
+    <th>@count</th>
+    <td> @item.servicedName </td>
+    <td> @item.serviceliconUrl </td>
+    <td> @(item.ServicesStatus == true ? "Aktif" : "Pasif")</td>
+
+    <td><a href="/Service/DeleteService/@item.servicID" class="btn btn-outline-danger">Sil</a></td>
+    <td><a href="/Service/UpdateService/@item.servicID" class="btn btn-outline-info">Güncelle</a></td>
+    <td><a href="/Service/MakeActive/@item.servicID" class="btn btn-outline-success">AktifYap</a></td>
+    <td><a href="/Service/MakePassive/@item.servicID" class="btn btn-outline-secondary">PasifYap</a></td>
+</tr>
+    }
+</table>
+        <br/>
+<a href="/Servise/AddService" class="btn btn-outline-primary">Yeni Hizmet Ekle</a>
